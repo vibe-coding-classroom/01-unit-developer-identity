@@ -1,0 +1,29 @@
+name: GitHub Classroom Autograding
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          FULL-ASSIGNMENT-CHECK_RESULTS: "${{steps.full-assignment-check.outputs.result}}"
+        with:
+          runners: full-assignment-check
+      - name: Full Assignment Check
+        id: full-assignment-check
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Full Assignment Check
+          setup-command: chmod +x .github/scripts/check_assignment.sh
+          command: ./.github/scripts/check_assignment.sh
+          timeout: 10
+          max-score: 100

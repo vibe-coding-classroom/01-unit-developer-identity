@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Full Assignment Check",
+      "setup": "chmod +x .github/scripts/check_assignment.sh",
+      "run": "./.github/scripts/check_assignment.sh",
+      "input": "",
+      "output": "🎉 All checks passed!",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 100
+    }
+  ]
+}
