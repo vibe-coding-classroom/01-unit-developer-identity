@@ -3,7 +3,7 @@
 Please provide the link to your public `hello-world` repository below.
 
 ### 🔗 Repository Link
-- [Hello World Repository](https://github.com/roverchen/hello-world) 
+- [Hello World Repository](https://github.com/roverchen/hello-world)
 
 ---
 > [!TIP]
